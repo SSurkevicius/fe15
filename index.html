@@ -2,66 +2,205 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Index</title>
-    <style>
-body {
-  background-image: url('https://www.palangatic.lt/data/events/large/d465c0655ed5f8bcb1e5fede220b4a30.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-h1 {
-  text-align: center;
-  font-size: 300%;
-  color: black;
-  font-family:Monaco;
-}
-h2 {
-  text-align: left;
-  font-size: 250%;
-  font-family:Monaco;
-}
-h3 {
-  text-align: left;
-  font-size: 150%;
-  font-family:Monaco;
-}
-h4 {
-  text-align: left;
-  font-size: 100%;
-  color: white;
-  font-family:Monaco;
-}
-</style>
-</head>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+      html{
+    font-size: 10px;
+      }
+      body{
+        font-family: 'Heebo', sans-serif;
+        background: linear-gradient(to right,#c2e59c, #64b3f4);
+      }
+      form{
+        background: linear-gradient(to bottom,#CAB8FF, #B5DEFF);
+        max-width: 600px;
+        height: auto;
+        text-align: center;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 100px
+      }
+      h1{
+        font-size: 3rem;
+      }
+      input,
+      textarea,
+      button,
+      select,
+      label {
+      display: block;
+      width: 50%;
+      margin: 10px auto;
+      border: none;
+      text-align: justify;
+      padding: 5px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+      button {
+        width: 30%;
+        padding: 10px 0;
+        font-size: 15px;
+        font-weight: bold;
+        background: #FCFFA6;
+        color: #CAB8FF;
+        text-align: center;
+      }
+      button:hover {
+        background: #FCFFA6;
+        color: #CAB8FF;
+      }
+      /* checkbox styling */
+            /* The container */
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        font-size: 10px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+      }
+      .radius {
+        border-radius: 50%;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the checkbox is checked, add a background */
+      .container input:checked ~ .checkmark {
+        background-color: #C1FFD7;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .radius:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 6px;
+        top: 0px;
+        width: 6px;
+        height: 15px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+      }
+
+        /* ----------------------- */
+
+    </style>
+    <title>Nusiskundimų forma</title>
   </head>
   <body>
-    <h1>One of my favorite groups in Lithuania</h1>
-    <h2>Daddy Was A Milkman</h2>
-    <h3>My top favorite his songs</h3>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/TSI27BiRlyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/I7a6aYHdlk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/xP1Qy31cb_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br><br>
-    <audio controls>
-    <source src="Daddy Was A Milkman - Tinginio Vasara.mp3" type="audio/mpeg">
-    </audio>
-    <audio controls >
-    <source src="Daddy Was A Milkman - Nieko Nebijau.mp3" type="audio/mpeg">
-    </audio>
-    <audio controls>
-    <source src="Daddy Was A Milkman - Breathe In (Original).mp3" type="audio/mpeg">
-    </audio>
-    <h3>Probably he won't be there, but keep looking for :)</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18451.80829832437!2d25.28587323568564!3d54.683650181778816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd9424bac16c47%3A0x2600d18d4c4546d1!2sU%C5%BEupis%2C%20Vilnius!5e0!3m2!1slt!2slt!4v1631645269511!5m2!1slt!2slt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <h4>Which song do you liked the most</h4>
-    <form action="https://www.livenation.lt/artist-daddy-was-a-milkman-1027213" method="get">
-    <label for="radio1">Tinginio Vasara</label>
-    <input id="radio1" type="radio" name="likes" value="TinginioVasara">
-    <label for="radio2">Nieko nebijau</label>
-    <input id="radio2" type="radio" name="likes" value="NiekoNebijau">
-    <label for="radio3">Breathe In</label>
-    <input id="radio3" type="radio" name="likes" value="BreatheIn"><br><br>
-    <input type="submit">
-  </form>
+    <form action="submitted.html" method="get">
+      <h1>Jūsų nusiskundimų forma</h1>
+
+      <label for="name">Vardas</label>
+      <input id="name" type="name" name="name" placeholder="Jūsų vardas">
+
+      <label for="surname">Pavardė</label>
+      <input id="surname" type="surname" name="surname" placeholder="Jūsų pavardė">
+
+      <label for="email">Įveskite savo el. paštą</label>
+      <input id="email" type="email" name="email" placeholder="Jūsų el. paštas">
+
+      <label for="tel">Telefono numerį</label>
+      <input id="tel" type="tel" name="tel" placeholder="Jūsų mob. telefono numeris">
+
+      <label for="shops">Pasirinkite parduotuvę:
+        <select name="shops">
+          <option value disabled selected>Parduotuvė</option>
+          <option value="maxima">MAXIMA</option>
+          <option value="rimi">RIMI</option>
+          <option value="lidl">LIDL</option>
+          <option value="iki">IKI</option>
+          <option value="norfa">Norfa</option>
+        </select>
+      </label>
+
+      <h2>Nusiskundimų tipas?</h2>
+      <label class="container">Nepatiko aptarnavimas
+        <input type="radio" name="complains">
+        <span class="checkmark radius"></span>
+      </label>
+      <label class="container">Prasta higiena parduotuvėje
+        <input type="radio" name="complains">
+        <span class="checkmark radius"></span>
+      </label>
+      <label class="container">Labai ilgos eilės
+        <input type="radio" name="complains">
+        <span class="checkmark radius"></span>
+      </label>
+      <label class="container">Prekės galiojimo laikas buvo pasibaigęs
+        <input type="radio" name="complains">
+        <span class="checkmark radius"></span>
+      </label>
+      <label class="container ">Kiti nusiskundimai
+        <input type="radio" name="complains">
+        <span class="checkmark radius"></span>
+      </label>
+      <input type="text" name="otherComplains" placeholder="jūsų nusiskundimas">
+
+      <div>
+        <label for="attach">Prisekite pasirinktą nuotrauką</label>
+        <input type="file" id="attach" name="file" accept="image/jpeg, image/gif, image/png">
+      </div>
+
+
+      <h2>Privatumo politika</h2>
+      <label class="container">Prašau patvirtinti, kad sutinkate su privatumo politika
+        <input type="checkbox" checked="checked" required>
+        <span class="checkmark check"></span>
+      </label>
+
+      <button type="submit" name="button">Siųsti <br> nusiskundimą!!!</button>
+    </form>
+
   </body>
 </html>

@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
     <style type="text/css">
+    /* Frame styling*/
       html{
-    font-size: 10px;
+        font-size: 10px;
       }
       body{
         font-family: 'Heebo', sans-serif;
@@ -31,18 +32,20 @@
       button,
       select,
       label {
-      display: block;
-      width: 50%;
-      margin: 10px auto;
-      border: none;
-      text-align: justify;
-      padding: 5px;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin: 10px auto;
+        border: none;
+        text-align: justify;
+        padding: 5px;
       }
 
       h2 {
         font-size: 2rem;
       }
       button {
+        display: block;
         width: 30%;
         padding: 10px 0;
         font-size: 15px;
@@ -54,6 +57,18 @@
       button:hover {
         background: #FCFFA6;
         color: #CAB8FF;
+      }
+      /* validating */
+      .validity::after {
+        padding-left: 5px;
+      }
+
+      input:invalid + .validity::after {
+        content: '✖';
+      }
+
+      input:valid+.validity::after {
+        content: '✓';
       }
       /* checkbox styling */
             /* The container */
@@ -153,7 +168,7 @@
       <label for="tel">Telefono numerį</label>
       <input id="tel" type="tel" name="tel" placeholder="Jūsų mob. telefono numeris">
 
-      <label for="shops">Pasirinkite parduotuvę:
+      <label class="shops">Pasirinkite parduotuvę:
         <select name="shops">
           <option value disabled selected>Parduotuvė</option>
           <option value="maxima">MAXIMA</option>
@@ -162,6 +177,11 @@
           <option value="iki">IKI</option>
           <option value="norfa">Norfa</option>
         </select>
+      </label>
+
+      <label class="visitDate">Apsilankymo data:
+        <input type="date" name="visitDate" required pattern="\d{4}-\d{2}-\d{2}">
+        <span class="validity"></span>
       </label>
 
       <h2>Nusiskundimų tipas?</h2>
@@ -187,11 +207,9 @@
       </label>
       <input type="text" name="otherComplains" placeholder="jūsų nusiskundimas">
 
-      <div>
-        <label for="attach">Prisekite pasirinktą nuotrauką</label>
-        <input type="file" id="attach" name="file" accept="image/jpeg, image/gif, image/png">
-      </div>
-
+        <label class="attach">Prisekite nuotrauką
+          <input type="file" name="file" accept="image/jpeg, image/gif, image/png">
+        </label>
 
       <h2>Privatumo politika</h2>
       <label class="container">Prašau patvirtinti, kad sutinkate su privatumo politika

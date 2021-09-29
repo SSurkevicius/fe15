@@ -1,224 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
-    <style type="text/css">
-    /* Frame styling*/
-      html{
-        font-size: 10px;
-      }
-      body{
-        font-family: 'Heebo', sans-serif;
-        background: linear-gradient(to right,#c2e59c, #64b3f4);
-      }
-      form{
-        background: linear-gradient(to bottom,#CAB8FF, #B5DEFF);
-        max-width: 600px;
-        height: auto;
-        text-align: center;
-        padding: 20px;
-        margin: 20px auto;
-        border-radius: 100px
-      }
-      h1{
-        font-size: 3rem;
-      }
-      input,
-      textarea,
-      button,
-      select,
-      label {
-        display: flex;
-        align-items: center;
-        width: 50%;
-        margin: 10px auto;
-        border: none;
-        text-align: justify;
-        padding: 5px;
-      }
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Scientists</title>
+        <link href="https://fonts.googleapis.com/css?family=News+Cycle:400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <div class="container">
+        <div class="card">
+          <h1>Isaac Newton</h1>
+          <h2>1643 – 1727</h2>
+          <main>
+            <div class=container-img>
+              <img class="float" src="images\Isaac-Newton.jpg" alt="Newton">
+              <img class="middle" src="images\zoom.png" alt="zoom">
+            </div>
+            <div class="citate">“To myself I am only a child playing on the beach, while vast oceans of truth lie undiscovered before me.”</div>ß
 
-      h2 {
-        font-size: 2rem;
-      }
-      button {
-        display: block;
-        width: 30%;
-        padding: 10px 0;
-        font-size: 15px;
-        font-weight: bold;
-        background: #FCFFA6;
-        color: #CAB8FF;
-        text-align: center;
-      }
-      button:hover {
-        background: #FCFFA6;
-        color: #CAB8FF;
-      }
-      /* validating */
-      .validity::after {
-        padding-left: 5px;
-      }
+            Newton was an English physicist, mathematician, astronomer, natural philosopher, alchemist, theologian and one of the most influential men in human history. His Philosophiæ Naturalis Principia Mathematica, published in 1687, is considered to be the most influential book in the history of science.
 
-      input:invalid + .validity::after {
-        content: '✖';
-      }
+          </main>
+          <div class="action">
+            <button class="read-more">Read more...</button>
+          </div>
+        </div>
+        <div class="card">
+          <h1>Albert Einstein</h1>
+          <h2>1879 – 1955</h2>
+          <main>
+            <div class=container-img>
+              <img class="float" src="images\Albert-Einstein.jpg" alt="Albert">
+              <img class="middle" src="images\zoom.png" alt="zoom">
+            </div>
+            <div class="citate">“A man should look for what is, and not for what he thinks should be.”</div>
 
-      input:valid+.validity::after {
-        content: '✓';
-      }
-      /* checkbox styling */
-            /* The container */
-      .container {
-        display: block;
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 5px;
-        cursor: pointer;
-        font-size: 10px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+            Einstein, a German physicist, is best known for his theory of relativity and specifically mass–energy equivalence, expressed by the equation E = mc2. Einstein received the 1921 Nobel Prize in Physics “for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect.
+          </main>
+          <div class="action">
+            <button class="read-more">Read more...</button>
+          </div>
+        </div>
+        <div class="card">
+          <h1>Nikola Tesla</h1>
+          <h2>1856 – 1943</h2>
+          <main>
+            <div class=container-img>
+              <img class="float" src="images\Nikola-Tesla.jpg" alt="Tesla">
+              <img class="middle" src="images\zoom.png" alt="zoom">
+            </div>
+            <div class="citate">“The scientists of today think deeply instead of clearly. One must be sane to think clearly, but one can think deeply and be quite insane.” </div>
+            Tesla was a Serbian engineer and inventor who is often described as the most important scientist and inventor of the modern age, a man who “shed light over the face of Earth”. He is best known for many revolutionary contributions in the field of electricity and magnetism in the late 19th and early 20th centuries.
+          </main>
+          <div class="action">
+            <button class="read-more">Read more...</button>
+          </div>
+        </div>
+      </div>
 
-      /* Hide the browser's default checkbox */
-      .container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-      }
-
-      /* Create a custom checkbox */
-      .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        background-color: #eee;
-      }
-      .radius {
-        border-radius: 50%;
-      }
-
-      /* On mouse-over, add a grey background color */
-      .container:hover input ~ .checkmark {
-        background-color: #ccc;
-      }
-
-      /* When the checkbox is checked, add a background */
-      .container input:checked ~ .checkmark {
-        background-color: #C1FFD7;
-      }
-
-      /* Create the checkmark/indicator (hidden when not checked) */
-      .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-      /* Create the indicator (the dot/circle - hidden when not checked) */
-      .radius:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-
-      /* Show the checkmark when checked */
-      .container input:checked ~ .checkmark:after {
-        display: block;
-      }
-
-      /* Style the checkmark/indicator */
-      .container .checkmark:after {
-        left: 6px;
-        top: 0px;
-        width: 6px;
-        height: 15px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-
-      }
-
-        /* ----------------------- */
-
-    </style>
-    <title>Nusiskundimų forma</title>
-  </head>
-  <body>
-    <form action="submitted.html" method="get">
-      <h1>Jūsų nusiskundimų forma</h1>
-
-      <label for="name">Vardas</label>
-      <input id="name" type="name" name="name" placeholder="Jūsų vardas">
-
-      <label for="surname">Pavardė</label>
-      <input id="surname" type="surname" name="surname" placeholder="Jūsų pavardė">
-
-      <label for="email">Įveskite savo el. paštą</label>
-      <input id="email" type="email" name="email" placeholder="Jūsų el. paštas">
-
-      <label for="tel">Telefono numerį</label>
-      <input id="tel" type="tel" name="tel" placeholder="Jūsų mob. telefono numeris">
-
-      <label class="shops">Pasirinkite parduotuvę:
-        <select name="shops">
-          <option value disabled selected>Parduotuvė</option>
-          <option value="maxima">MAXIMA</option>
-          <option value="rimi">RIMI</option>
-          <option value="lidl">LIDL</option>
-          <option value="iki">IKI</option>
-          <option value="norfa">Norfa</option>
-        </select>
-      </label>
-
-      <label class="visitDate">Apsilankymo data:
-        <input type="date" name="visitDate" required pattern="\d{4}-\d{2}-\d{2}">
-        <span class="validity"></span>
-      </label>
-
-      <h2>Nusiskundimų tipas?</h2>
-      <label class="container">Nepatiko aptarnavimas
-        <input type="radio" name="complains">
-        <span class="checkmark radius"></span>
-      </label>
-      <label class="container">Prasta higiena parduotuvėje
-        <input type="radio" name="complains">
-        <span class="checkmark radius"></span>
-      </label>
-      <label class="container">Labai ilgos eilės
-        <input type="radio" name="complains">
-        <span class="checkmark radius"></span>
-      </label>
-      <label class="container">Prekės galiojimo laikas buvo pasibaigęs
-        <input type="radio" name="complains">
-        <span class="checkmark radius"></span>
-      </label>
-      <label class="container ">Kiti nusiskundimai
-        <input type="radio" name="complains">
-        <span class="checkmark radius"></span>
-      </label>
-      <input type="text" name="otherComplains" placeholder="jūsų nusiskundimas">
-
-        <label class="attach">Prisekite nuotrauką
-          <input type="file" name="file" accept="image/jpeg, image/gif, image/png">
-        </label>
-
-      <h2>Privatumo politika</h2>
-      <label class="container">Prašau patvirtinti, kad sutinkate su privatumo politika
-        <input type="checkbox" required>
-        <span class="checkmark check"></span>
-      </label>
-
-      <button type="submit" name="button">Siųsti <br> nusiskundimą!!!</button>
-    </form>
-
-  </body>
+    </body>
 </html>
